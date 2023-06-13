@@ -3,6 +3,7 @@ import { lazy } from "react"
 import Home from "@/pages/home"
 import { Navigate } from "react-router-dom"
 import React from "react"
+import Login from "@/pages/Login"
 const About = lazy(() => import("../pages/about"))
 const User = lazy(() => import("../pages/user"))
 const MonitorSet = lazy(()=> import("../pages/monitorSet/index"))
@@ -60,8 +61,12 @@ const routes = [
         ],
     }, 
     {
+        path: '/login',
+        element:<Login />
+    },
+    {
     path:"*",
-    element:<Navigate to="/pay-monitor'"/>
+    element:<Navigate to="/pay-monitor"/>
   },
 ]
 
